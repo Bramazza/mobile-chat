@@ -17,7 +17,7 @@ export default class Chat extends Component <{}> {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome {this.props.name}
+          Welcome {this.props.navigation.state.params.name}
         </Text>
         <Text style={styles.instructions}>
           To get started, edit App.js

@@ -25,12 +25,13 @@ export default class Home extends Component <{}> {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome Home
+          Enter your name
         </Text>
         <View style={styles.TextInputContainer}>
         <TextInput style={styles.TextInput}
         underlineColorAndroid='transparent'
         placeholder="John Carpenter"
+        autoCapitalize = "sentences"
         onChangeText={(text) => this.setState({name: text,})}
         value={this.state.name}
       />
@@ -38,7 +39,7 @@ export default class Home extends Component <{}> {
       <View style={styles.Button}>
         <Button
           onPress={
-            ()=> navigate("Second")
+            ()=> navigate("Second", {name: this.state.name})
           }
           title = 'Go to Chat'
         />
@@ -66,7 +67,7 @@ const styles = StyleSheet.create({
     borderRadius:5,
     borderColor: 'gray',
     borderWidth: 1,
-
+    textAlign: 'center'
   },
   Button: {
     margin:10,
