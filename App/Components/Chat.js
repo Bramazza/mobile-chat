@@ -13,6 +13,7 @@ import {
 import {send, subscribe } from 'react-native-training-chat-server';
 import RevesedFlatList from 'react-native-reversed-flat-list';
 
+
 const CHANNEL = 'Problemi';
 
 export default class Chat extends Component <{}> {
@@ -77,19 +78,26 @@ renderItem({item}) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F5FCFF',
+    backgroundColor: 'white',
   },
   message: {
-    fontSize: 18,
+    fontSize: 14,
+    backgroundColor:'#F4F4F4',
+    padding:10,
+    borderRadius:10,
+    color: '#272727',
+    borderWidth:0.3,
+    borderColor:'#f0f0f0',
   },
   row: {
-    padding: 20,
-    borderBottomWidth:1 ,
-    borderBottomColor: '#eee',
+    marginHorizontal: 20,
+    marginVertical: 10,
   },
   sender: {
     fontWeight: 'bold',
-    paddingRight: 10,
+    fontSize: 12,
+    marginBottom:5,
+    color: '#7FA1A6',
   },
   footer: {
     flexDirection:'row',

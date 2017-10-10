@@ -17,7 +17,8 @@ import {
 } from 'react-navigation';
 
 import Home from './App/Components/Home.js';
-import Chat from './App/Components/Chat.js'
+import Chat from './App/Components/Chat.js';
+
 
 const App = StackNavigator({
   First: { screen: Home },
